@@ -1,7 +1,7 @@
 import { ACTION_SET_ACTIVITY, ACTION_SET_NAME } from "../actionTypes";
 
 const initialState = {
-  name: "Milo",
+  name: "Stray",
   activity: "napping",
 };
 

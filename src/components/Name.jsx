@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import setName from "../redux/actions";
+import { setName } from "../redux/actions";
 
 class UpdateName extends Component {
   state = {
@@ -8,13 +8,12 @@ class UpdateName extends Component {
   };
   handleChange = (e) => {
     this.setState({
-      textInpute: e.target.value,
+      textInput: e.target.value,
     });
   };
   handleSubmit = (e) => {
     e.preventDefault();
-    const { textInput } = this.state;
-    this.props.setName(textInput);
+    this.props.setName(this.state.textInput);
   };
   render() {
     return (
