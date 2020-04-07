@@ -17,7 +17,7 @@ class UpdateName extends Component {
   };
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input type="text" onChange={this.handleChange} placeholder="newname" />
         <button type="submit"> change name </button>
       </form>

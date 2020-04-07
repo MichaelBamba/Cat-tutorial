@@ -1,14 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
-import UpdateName from "./Name";
-
 import { setActivity } from "../redux/actions";
+
+import UpdateName from "./Name";
 
 const Activity = ({ activity, name, setActivity }) => (
   <>
     <h1>What is the cat doing?</h1>
     <p>
-      {name} is {activity}
+      {name} is {activity.activity}
     </p>
 
     <button onClick={() => setActivity("eating")}>Eating</button>
