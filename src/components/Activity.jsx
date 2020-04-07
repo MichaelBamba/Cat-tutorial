@@ -1,16 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
-import { eat } from "../redux/actions";
-import { play } from "../redux/actions";
-import { nap } from "../redux/actions";
 
-const Activity = ({ activity, eat, nap, play }) => (
+import { setActivity } from "../redux/actions";
+
+const Activity = ({ activity, setActivity }) => (
   <>
     <h1>What is the cat doing?</h1>
     <p>The cat is {activity}</p>
-    <button onClick={() => eat()}>Eating</button>
-    <button onClick={() => play()}>Play</button>
-    <button onClick={() => nap()}>nap</button>
+    <button onClick={() => setActivity("eat")}>Eating</button>
+    <button onClick={() => setActivity("play")}>Play</button>
+    <button onClick={() => setActivity("nap")}>nap</button>
   </>
 );
 const mapStateToProps = (state) => {
@@ -18,4 +17,4 @@ const mapStateToProps = (state) => {
   return activity;
 };
 
-export default connect(mapStateToProps, { eat, nap, play })(Activity);
+export default connect(mapStateToProps, { setActivity })(Activity);
