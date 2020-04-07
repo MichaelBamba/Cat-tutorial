@@ -1,4 +1,4 @@
-import { ACTION_SET_ACTIVITY } from "../actionTypes";
+import { ACTION_SET_ACTIVITY, ACTION_SET_NAME } from "../actionTypes";
 
 const initialState = {
   name: "Milo",

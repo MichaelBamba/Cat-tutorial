@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import setName from "..redux/actions";
+import setName from "../redux/actions";
 
 class UpdateName extends Component {
   state = {
