@@ -1,15 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
+import Updatename from "./Name";
 
 import { setActivity } from "../redux/actions";
 
-const Activity = ({ activity, setActivity }) => (
+const Activity = ({ activity, setActivity, name }) => (
   <>
     <h1>What is the cat doing?</h1>
-    <p>The cat is {activity}</p>
-    <button onClick={() => setActivity("eat")}>Eating</button>
-    <button onClick={() => setActivity("play")}>Play</button>
-    <button onClick={() => setActivity("nap")}>nap</button>
+    <p>
+      {name} is {activity}
+    </p>
+
+    <button onClick={() => setActivity("eating")}>Eating</button>
+    <button onClick={() => setActivity("playing")}>Play</button>
+    <button onClick={() => setActivity("napping")}>nap</button>
   </>
 );
 const mapStateToProps = (state) => {
