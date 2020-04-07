@@ -1,12 +1,13 @@
-import { ACTION_NAME } from "../name";
+import { NAME } from "../name";
 
 const initialState = {
-  activity: "napping",
+  name: "stray",
 };
 
-const nameReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ACTION_NAME: {
+const nameReducer = (state = initialState, name) => {
+  // eslint-disable-next-line default-case
+  switch (name.type) {
+    case NAME: {
       return {
         ...state,
         name: { name },
