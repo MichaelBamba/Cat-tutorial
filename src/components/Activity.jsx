@@ -4,7 +4,7 @@ import UpdateName from "./Name";
 
 import { setActivity } from "../redux/actions";
 
-const Activity = ({ activity, setActivity, name }) => (
+const Activity = ({ activity, name, setActivity }) => (
   <>
     <h1>What is the cat doing?</h1>
     <p>
@@ -18,8 +18,8 @@ const Activity = ({ activity, setActivity, name }) => (
   </>
 );
 const mapStateToProps = (state) => {
-  const { activity } = state;
-  return activity;
+  const { activity, name } = state;
+  return { activity, name };
 };
 
 export default connect(mapStateToProps, { setActivity })(Activity);

@@ -1,9 +1,6 @@
-import { ACTION_SET_ACTIVITY, ACTION_SET_NAME } from "../actionTypes";
+import { ACTION_SET_ACTIVITY } from "../actionTypes";
 
-const initialState = {
-  name: "Stray",
-  activity: "napping",
-};
+const initialState = "napping";
 
 const activityReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -14,13 +11,7 @@ const activityReducer = (state = initialState, action) => {
         activity,
       };
     }
-    case ACTION_SET_NAME: {
-      const { name } = action.payload;
-      return {
-        ...state,
-        name,
-      };
-    }
+
     default:
       return state;
   }
