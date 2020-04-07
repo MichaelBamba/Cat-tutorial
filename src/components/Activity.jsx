@@ -17,4 +17,5 @@ const mapStateToProps = (state) => {
   const { activity } = state;
   return activity;
 };
+
 export default connect(mapStateToProps, { eat, nap, play })(Activity);
